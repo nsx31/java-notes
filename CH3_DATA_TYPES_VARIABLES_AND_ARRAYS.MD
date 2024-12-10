@@ -1,7 +1,6 @@
 Before diving deeper, remember that in Java, almost everything is treated as an object except for primitive data types, loops, and statements.
 
 ## 01: Primitve and Reference data types : 
----
 - primitve data types also known as built in data types.
     - integers : 
         - byte
@@ -41,11 +40,11 @@ boolean isAdmin = false;
 **NOTE :** in java, primitive data types also have corresponding reference type counterparts (e.g., int → Integer, double → Double). This allows primitive values to be used in Java's collection framework, which only supports reference types. These reference types are part of Java's wrapper classes.
 
 ## 02: Variables : 
----
+
 When we initialize a variable with a primitive data type, the variable stores the actual value. However, when we use a reference data type, the variable stores the memory address of the **object**, not the actual value. In other words, the reference variable points to the location where the value is stored, effectively creating a reference to that value. 
 
 ## 03: Type casting : 
----
+
 ```java
 // cast: integer to floating point number
 int x = 12;
@@ -56,7 +55,7 @@ int avg = (int)12.45;
 ```
 
 ## 04: Arrays :
----
+
 ```java
 // array declaration
 int[] arr;
