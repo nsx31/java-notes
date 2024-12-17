@@ -174,3 +174,127 @@ class Example {
 }
 ```
 
+## 08 Inheritance : 
+- child class inherits properties and methods of parent class.
+- child class is called subclass and the parent class is called super class.
+- we use **extend** keyword to perform inheritance.
+
+```java
+// parent class or super class
+class A {
+    int i,j;
+
+    void showij(){
+        System.out.println("i: "+i);
+        System.out.println("j: "+j);
+    }
+}
+
+// child class or sub class
+class B extends A {
+    int k;
+
+    void showijk(){
+        System.out.println("i: "+i);
+        System.out.println("j: "+j);
+        System.out.println("k: "+k);
+    }
+}
+```
+- although child class includes all of the members of parent class but it cannot inherit those members which are set to **private** in parent class.
+
+## 09 Calling constructor of parent class from child class : 
+- to call constructor of parent class from the child class, we use **super()**.
+```java
+// parent
+class Student {
+    String name;
+    int rollnumber;
+    int age;
+
+    Student(String name, int rollnumber, int age){
+        this.name = name;
+        this.rollnumber = rollnumber;
+        this.age = age;
+    }
+
+    void getInfo(){
+        System.out.println(this.name);
+        System.out.println(this.age);
+        System.out.println(this.rollnumber);
+    }
+}
+
+// child
+class BtechStudent extends Student {
+    String branch;
+    int batch;
+
+    BtechStudent(String name, int rollnumber, int age, String branch, int batch){
+        // super
+        super(String name, int rollnumber, int age);
+        this.branch = branch;
+        this.batch = batch;
+    }
+}
+
+
+// BtechStudent object
+BtechStudent nakul = new BtechStudent("nakul singh", 45, 25, 'ECE', 2018);
+```
+- We can use **super** in a similar way to how we use **this**. While **this** is used to access members of the same class, **super** is used to access members of the parent class.
+- Imagine we override a property of the parent class inside the child class. If there is a situation where we want to use the overridden property as it was implemented in the parent class, we can use super.propertyName to access the parent class's property.
+
+```java
+class A {
+    int i = 10;
+}
+
+// child class or sub class
+class B extends A {
+    int i = 20;
+
+    void showi(){
+        System.out.println(i);  // 20
+    }
+
+    void showisuper(){
+        System.out.println(super.i);    // 10
+    }
+}
+```
+
+## 10 Abstract class : 
+- When a parent class wants its child classes to follow certain, the parent class can be defined as an **abstract** class.
+- Sometimes, the parent class cannot predict the exact implementation of its members. In such cases, the parent class delegates the task of implementation to the child class. To achieve this, the parent class must be marked as **abstract**, and the members that will be implemented by the child class must also be declared as **abstract**.
+- It is complusory for a child class to implement those members which are marked as **abstract** in parent class.
+- Abstract class cannot be used to instantiate objects.
+
+```java
+abstract class Shape {
+    int dim1, dim2;
+
+    // method marked as abstract
+    abstract void area();
+}
+
+class Rectangle extends Shape {
+    int length, breadth;
+
+    Rectangle(int length, int breadth){
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    // implementation of method that was previously marked as abstract
+    void area(){
+        System.out.println(this.length*this.breadth);
+    }
+}
+
+```
+
+## 11 Final :
+- if we use **final** with a variable it will act as a constant.
+- if we use **final** will a class that we cannot perform inheritance with that class.
+- if we use **final** with a method then we cannot override that method in the child class.
