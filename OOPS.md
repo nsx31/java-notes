@@ -148,3 +148,29 @@ class Student() {
 }
 ```
 
+- static : when we want a class member to run independently i.e without creation of instance first in that case we modify that member with **static**.
+    - method, class, variable, block can be set to static.
+    - variables declared as static act as global variables.
+    - we cannot use non-static method inside a static method.
+
+```java
+class Example {
+    // static variable
+    static int global = 13;
+
+    // static block
+    /*
+    You might be wondering why we need a static block. To answer that, if we have some code 
+    that needs to execute when the class is loaded into memory, we use a static block.
+    */
+    static {
+        System.out.println("Static block executed.");  
+    }
+
+    // static method
+    static void display() {  
+        System.out.println("This is a static method.");  
+    }  
+}
+```
+
