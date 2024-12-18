@@ -299,3 +299,55 @@ class Rectangle extends Shape {
 - If we use **final** will a class then we cannot perform inheritance with that class.
 - If we use **final** with a method then we cannot override that method in the child class.
 
+## 12 Interface : 
+- Interface is like a blueprint of class, it specifies what a class must do, but not how it does.
+- Variables inside the interface are by default **public**, **final** and **static** and the methods are **public**, **abstract**.
+- Inside interface we do not define method body only it's name, return data type and method paramter.
+- A class can use multiple interfaces.
+- If we are defining an interface in a separate file then the name of the file and interface name must be same.
+```java
+interface Callback {
+    void callback(int param);
+}
+```
+- If a class is using one or more interface, the interface is separated by comma. 
+- When you implement an interface method, it must be declared as **public**.
+```java
+class Client implements Callback {
+    String userId = "fs3214a";
+
+    // interface method (which is also set to public)
+    public void callback(int p){
+        System.out.println("p: "+p);
+    }
+
+    void getId(){
+        System.out.println(this.userId);
+    }
+}
+```
+- Interface can extend one another
+```java
+interface A {
+    void showA();
+}
+
+interface B extends A {
+    void showB();
+}
+
+/*
+now if a class is implemented using interface B that class must implement
+both showA and showB methods 
+*/
+
+class Demo implements B {
+    public void showA(){
+        System.out.println("A");
+    }
+
+    public void showB(){
+        System.out.println("B");
+    }
+}
+```
