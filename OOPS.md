@@ -1,7 +1,7 @@
 ## 01  Java class : 
-- using java class we can define our own data types.
-- classes are used to create object.
-- a class contains properties and methods which are also known as class members. 
+- Using java class we can define our own data types.
+- Classes are used to create object.
+- A class contains properties and methods which are also known as class members. 
 
 ## 02 Class syntax, properties & methods : 
 ```java
@@ -69,8 +69,8 @@ Student bruno = new Student("bruno mars", 27, 69, 89.12);
 Earlier we have to manually initialize all class variables which can be very tedious and inefficient now its super easy and quick. 
 
 ## 05 Constructor overloading : 
-- defining two or more methods with same name inside the same class is called method overloading.
-- java use type and number of arguments as its guide to determine which version of the overloaded method to actually call.
+- Defining two or more methods with same name inside the same class is called method overloading.
+- Java use type and number of arguments as its guide to determine which version of the overloaded method to actually call.
 ```java
 class Student() {
     String name;
@@ -131,13 +131,13 @@ setStudentName(std);
 ```
 
 ## 07 Access control : 
-- java has three access modifiers : 
-    - public
-    - private
-    - protected
-- when class members are modified by **public**, then those members can be accessed by anyone.
-- when class members are modified by **private**, then members can be accessed by other members of same class.
-- when no access modifier is used then class members are by default set to **public** but those members are public within its own package.
+- Java has three access modifiers : 
+    - Public
+    - Private
+    - Protected
+- When class members are modified by **public**, then those members can be accessed by anyone.
+- When class members are modified by **private**, then members can be accessed by other members of same class.
+- When no access modifier is used then class members are by default set to **public** but those members are public within its own package.
 
 ```java
 class Student() {
@@ -148,7 +148,7 @@ class Student() {
 }
 ```
 
-- static : when we want a class member to run independently i.e without creation of instance first in that case we modify that member with **static**.
+- Static : when we want a class member to run independently i.e without creation of instance first in that case we modify that member with **static**.
     - method, class, variable, block can be set to static.
     - variables declared as static act as global variables.
     - we cannot use non-static method inside a static method.
@@ -175,10 +175,10 @@ class Example {
 ```
 
 ## 08 Inheritance : 
-- child class inherits properties and methods of parent class.
-- child class is called subclass and the parent class is called super class.
-- we use **extend** keyword to perform inheritance.
-
+- Child class inherits properties and methods of parent class.
+- Child class is called subclass and the parent class is called super class.
+- We use **extend** keyword to perform inheritance.
+-  A child class can inherit from only one parent class in Java (single inheritance). To inherit from multiple parent classes, we need to create an inheritance hierarchy, where a child class inherits from a parent class, and that parent class, in turn, inherits from another class.
 ```java
 // parent class or super class
 class A {
@@ -201,10 +201,10 @@ class B extends A {
     }
 }
 ```
-- although child class includes all of the members of parent class but it cannot inherit those members which are set to **private** in parent class.
+- Although child class includes all of the members of parent class but it cannot inherit those members which are set to **private** in parent class.
 
 ## 09 Calling constructor of parent class from child class : 
-- to call constructor of parent class from the child class, we use **super()**.
+- To call constructor of parent class from the child class, we use **super()**.
 ```java
 // parent
 class Student {
@@ -295,6 +295,7 @@ class Rectangle extends Shape {
 ```
 
 ## 11 Final :
-- if we use **final** with a variable it will act as a constant.
-- if we use **final** will a class that we cannot perform inheritance with that class.
-- if we use **final** with a method then we cannot override that method in the child class.
+- If we use **final** with a variable it will act as a constant.
+- If we use **final** will a class then we cannot perform inheritance with that class.
+- If we use **final** with a method then we cannot override that method in the child class.
+
