@@ -1,5 +1,6 @@
 1. Just like **class** we can use **interface** to create our own data type. 
-2. A **class** can inherit can inherit multiple **interfaces**.
+2. A **class** can inherit multiple **interfaces**.
+3. If a class implements more than one **interface**, the interfaces are separated with a comma.
 
 ```java
 // **************** INTERFACE CREATION ****************
@@ -7,7 +8,8 @@ public interface BoxModel {
     double boxVolume(double l, double b, double h);
 }
 ```
-
+3. Variables declared inside the **interface** are implicitly **public**, **final** and **static**.
+4. Methods declared inside the **interface** are implicitly **public**.
 ```java
 // **************** INTERFACE IMPLEMENTATION ****************
 class Box implements BoxModel {
@@ -19,7 +21,7 @@ class Box implements BoxModel {
 
     // interface method
     @Override
-    double boxVolume(double l, double b, double h){
+    public double boxVolume(double l, double b, double h){
         return l*b*h;
     }
 
@@ -50,3 +52,4 @@ class Demo {
     }
 }
 ```
+
