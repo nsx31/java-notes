@@ -2,7 +2,7 @@
 `java.util` package.
 
 #### Why do we need collection framework ?
-To understand the need of collection frameword let's first understand the limitations of arrays. Since we already have arrays, why do we need more data structures that collection frameword provides.
+To understand the need of collection framework let's first understand the limitations of arrays. Since we already have arrays, why do we need more data structures that collection framework provides.
 
 ##### Limitation of arrays : 
 1. **Fixed Size:** Arrays have a fixed size, which must be determined at the time of creation and cannot be changed later.
@@ -33,7 +33,7 @@ Example: The `Collection` interface.
 5. **Map :** When we want to store collection object in key value pair in that case we use map interface. 
 
 #### Comparable interface : 
-When we want the default sorting order i.e sorting order that collection frameword offers then use this interface.
+When we want the default sorting order i.e sorting order that collection framework offers then use this interface.
 
 #### Comparator interface :
 But if want to create our own sorting order then use this inteface.
