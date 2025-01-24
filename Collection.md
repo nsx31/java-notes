@@ -1,3 +1,6 @@
+# Chapter 01: Overview
+---
+
 # 01 Location of collection framework : 
 `java.util` package.
 
@@ -51,11 +54,13 @@ There are two utility classes in collection framework :
 2. Arrays
 
 ---
+# Ch 02: Everything in detail
+---
 
-# 1. Collection Interface :
+# 01 Collection Interface :
 - If we want to represent a group of individual objects as a single quantity in that case we use collection interface.
 - Collection Interface defines most common methods which are applicable for any collection object.
-- Methods in collection framework : 
+- Methods provided by `Collection` interface : 
 ```java
 boolean add(Object o)
 boolean addAll(Collection o)
@@ -73,13 +78,14 @@ Iterator iterator()
 
 **Note** : Collection Interface does not contain any methods to reterive objects. 
 
-# 2. List Interface :
+# 02 List Interface :
 - It is a child interface of `Collection` interface. 
-- When we want to insert duplicate values and also want to maintain the insertion order then we use `List` interface. 
+- We use `List` interface when we want to insert duplicate values and also want to maintain the insertion order. 
 - In `List` inteface, **index** play an important role. Using **index** we can maintain insertion order as well as differentiate between duplicate values.
+- Methods provided by `List` interface :
 
 ```java
-ArrayList l = new ArrayList();
+List l = new ArrayList();
 
 l.add("a");
 l.add(int index, Object o);         // adding object at specific index.
@@ -91,15 +97,15 @@ l.get(int index)                    // returns object present at that index.
 l.listIterator()                    // returns object one by one.
 l.set(int index, Object o)          // replace element at specific location.
 ```
-
-## 2.1 ArrayList Class :
+## Implemented classes of `List` interface : 
+### 1. ArrayList Class :
 - Underlying data structure of `ArrayList` is resizable array.
 - Duplicates are allowed and insertion order is preserved.
 - Hetrogenous objects are allowed.
-    - Hetrogenous objects are allowed in collection framewok except in case of `TreeSet` and `TreeMap`.
+**Note:** Hetrogenous objects are allowed in collection framewok except in case of `TreeSet` and `TreeMap`.
 - `null` insertion is allowed .
 
-### 2.1.1 ArrayList Constructors :
+### ArrayList Constructors :
 ```java
 /* *************** FIRST TYPE OF CONSTRUCTOR ***************
 Creates an empty ArrayList object with default initial capacity 10.
@@ -125,23 +131,23 @@ ArrayList l = new ArrayList(Collection c);
 
 **Usually we can use Collections to hold and transfer Objects from one place to another place, to provide support for this requirement every Collection already implements `Serializable` and `Cloneable` interface.**
 
-- To make sure any element can be accessed in same amount of constant time whether it is first element or the last element both ArrayList and Vector class implement `RandomAccess` interface.
+- To make sure any element can be accessed in same amount of constant time whether it is first element or the last element both `ArrayList` and `Vector` class implement `RandomAccess` interface.
     - `RandomAccess` interface is present inside `java.util` package. It does not contain any methods hence it is a **Marker** interface.
-- If our frequent operation is retrieval of data then ArrayList is the best choice since it implements RandomAccess interface. 
-- If our frequent operation is insertion or removal of objects from the middle then ArryaList is the worst choice since it requires several shifting operation.  
+- If our frequent operation is retrieval of data then `ArrayList` is the best choice since it implements RandomAccess interface. 
+- If our frequent operation is insertion or removal of objects from the middle then `ArryaList` is the worst choice since it requires several shifting operation.  
 
-### 2.1.2 Difference between ArrayList and Vectors 
+### Difference between ArrayList and Vectors 
 ![Alt](./images/ArrayListVsVectors.png)
 - ArrayList size grows as: (currentSize * 3/2) + 1 while Vectors size doubles.
 
-### 2.1.3 How to get synchronized version of ArrayList object :
+### How to get synchronized version of ArrayList object :
 ```java
 ArrayList l = new ArrayList();
 
 List newList = Collections.synchronized(l);
 ```
 
-## 2.2 LinkedList Class :
+### 2 LinkedList Class :
 - Underlying data structure for LinkedList is doubly linked list.
 - Insertion order is preserved and duplicates are allowed.
 - Hertogenous elements are allowed.
