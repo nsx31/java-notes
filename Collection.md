@@ -1,5 +1,6 @@
 ### Chapter 01: Overview
 ---
+<br>
 
 # 01 Location of collection framework : 
 `java.util` package.
@@ -53,9 +54,12 @@ There are two utility classes in collection framework :
 1. Collections
 2. Arrays
 
+<br>
+
 ---
 ### Chapter 02: Everything in detail
 ---
+<br>
 
 # 01 Collection Interface :
 - If we want to represent a group of individual objects as a single quantity in that case we use collection interface.
