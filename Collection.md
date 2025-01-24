@@ -178,11 +178,11 @@ LinkedList l = new LinkedList();
 LinkedList = new LinkedList(Collection c);
 ``` 
 
-### Difference between ArrayList and LinkedList
+### Difference between ArrayList and LinkedList :
 ![Alt](./images/Screenshot%20From%202025-01-24%2015-29-02.png)
 
 
-### 3. Vectors
+### 3. Vectors :
 - Underlying data structure is growable arrays.
 - Duplicates are allowed and insertion order is maintained.
 - Hetrogenous objects are allowed.
@@ -217,7 +217,7 @@ etc.
 */
 ```
 
-### Vector Constructor
+### Vector Constructor :
 ```java
 // creates vector object with 10 initial capacity
 // capacity of newly created vector when current vector gets filled is twice the size of current vector.
@@ -237,3 +237,19 @@ Vector v = new Vector(int initialCapacity, int incrementalCapacity);
 Vector v = new Vector(Collection c);
 ```
 
+### 4. Stack :
+- It is a child class of `Vector` class. 
+- `Stack` works on LIFO (last-in-first-out) model.
+```java
+push(Object o)  // add element into the stack.
+pop()           // remove element from the top of the stack.
+peek()          // returns element present at the top of the stack without removing it.
+empty()         // check if stack is empty.
+offset search(Object o) // from top of the stack at which level the object is present. 
+                        // and returns -1 if it does not exists.
+```
+
+### Stack constructor :
+```java
+Stack s = new Stack()
+```
