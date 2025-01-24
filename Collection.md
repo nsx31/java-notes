@@ -151,7 +151,7 @@ ArrayList l = new ArrayList();
 List newList = Collections.synchronized(l);
 ```
 
-### 2 LinkedList Class :
+### 2. LinkedList Class :
 - Underlying data structure for LinkedList is doubly linked list.
 - Insertion order is preserved and duplicates are allowed.
 - Hertogenous elements are allowed.
@@ -169,7 +169,7 @@ Object removeFirst()
 Object removeLast()
 ```
 
-### 2.2.1 LinkedList Constructors :
+### LinkedList Constructors :
 ```java
 // creates empty linked list object.
 LinkedList l = new LinkedList();
@@ -178,11 +178,11 @@ LinkedList l = new LinkedList();
 LinkedList = new LinkedList(Collection c);
 ``` 
 
-### 2.2.2 Difference between ArrayList and LinkedList
+### Difference between ArrayList and LinkedList
 ![Alt](./images/Screenshot%20From%202025-01-24%2015-29-02.png)
 
 
-## 2.3 Vectors
+### 3. Vectors
 - Underlying data structure is growable arrays.
 - Duplicates are allowed and insertion order is maintained.
 - Hetrogenous objects are allowed.
@@ -217,7 +217,7 @@ etc.
 */
 ```
 
-### 2.3.1 Vector Constructor
+### Vector Constructor
 ```java
 // creates vector object with 10 initial capacity
 // capacity of newly created vector when current vector gets filled is twice the size of current vector.
