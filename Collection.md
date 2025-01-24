@@ -1,4 +1,4 @@
-# Chapter 01: Overview
+### Chapter 01: Overview
 ---
 
 # 01 Location of collection framework : 
@@ -54,7 +54,7 @@ There are two utility classes in collection framework :
 2. Arrays
 
 ---
-# Ch 02: Everything in detail
+### Chapter 02: Everything in detail
 ---
 
 # 01 Collection Interface :
