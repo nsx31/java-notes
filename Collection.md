@@ -8,7 +8,7 @@
 # 02 Why do we need collection framework ?
 To understand the need of collection framework let's first understand the limitations of arrays. Since we already have arrays, why do we need more data structures that collection framework provides.
 
-## Limitation of arrays : 
+## 2.1 Limitation of arrays : 
 1. **Fixed Size:** Arrays have a fixed size, which must be determined at the time of creation and cannot be changed later.
 2. **Homogeneity:** Arrays are homogeneous in nature, meaning they can store only one type of object. 
 3. **Lack of Built-in Methods:** Arrays do not have an underlying data structure. As a result, there are no ready-made methods available for operations like sorting, deletion, or searching. This requires developers to repeatedly implement these functionalities from scratch.
@@ -25,7 +25,7 @@ Example: The `Map` interface.
 2. Interfaces that define data structures storing objects in non-key-value pairs
 Example: The `Collection` interface. 
 
-## Five key interfaces offered by the collection framework :
+## 3.1 Five key interfaces offered by the collection framework :
 1. **Collection Interface :** The `Collection` interface is rarely used directly; instead, its child interfaces are more commonly utilized. The Collection interface provides general-purpose methods that are applicable to any collection object. Example : `add()`, `remove()`, `size()`, `isEmpty()`.
 
     ##### 1.1 Difference between `Collection` and `Collections` : 
@@ -36,20 +36,20 @@ Example: The `Collection` interface.
 4. **Queue :** It is a child interface of `Collection` interface. It is used when we want to store the data before processing it.
 5. **Map :** When we want to store collection object in key value pair in that case we use map interface. 
 
-## Comparable interface : 
+## 3.2 Comparable interface : 
 When we want the default sorting order i.e sorting order that collection framework offers then use this interface.
 
-## Comparator interface :
+## 3.3 Comparator interface :
 But if want to create our own sorting order then use this inteface.
 
-## Cursors :
-Suppose we want to extract an object from the collection in that case we need cursors. There are 3 cursors in java :
-1. Enumeration interface
-2. Iterator interface
-3. ListIterator interface
+## 3.4 Cursors :
+If we want to extract objects from a collection but objects extraction is done at one object at a time then we should go for cursors. There are three type of cursors available in java :
+1. `Enumeration` interface
+2. `Iterator` interface
+3. `ListIterator` interface
 
 
-## Utility Classes : 
+## 3.5 Utility Classes : 
 There are two utility classes in collection framework :
 1. Collections
 2. Arrays
@@ -101,7 +101,7 @@ l.get(int index)                    // returns object present at that index.
 l.listIterator()                    // returns object one by one.
 l.set(int index, Object o)          // replace element at specific location.
 ```
-## Implemented classes of `List` interface : 
+## 2.1 Implemented classes of `List` interface : 
 ### 1. ArrayList Class :
 - Underlying data structure of `ArrayList` is resizable array.
 - Duplicates are allowed and insertion order is preserved.
@@ -253,3 +253,45 @@ offset search(Object o) // from top of the stack at which level the object is pr
 ```java
 Stack s = new Stack()
 ```
+
+# 03 Cursors :
+If we want to retrieve objects one by one  from the collections then we should go for Cursors. There are three type of cursors in java :
+1. Enumeration
+2. Iterator
+3. ListIterator
+
+## 3.1 Enumeration :
+To get `Enumeration` use `elements()` method with `Vector`.
+```java
+Vector v = new Vector();
+Enumeration e = v.elements();
+
+/*
+In enumeration we have only two methods :
+1. boolean hasmoreElements();
+2. Object nextElement();
+*/ 
+```
+```java
+// Example :
+Vector v = new Vector();
+for(int i=0; i<=10; i++){
+    v.addElement(i);
+}
+
+// printing only those elements which are even
+Enumeration e = v.elements();
+while(e.hasmoreElements()){
+    Integer i = (Integer)e.nextElement();
+
+    if(i%2 == 0){
+        System.out.println(i);
+    }
+}
+```
+
+### Limitations of Enumeration :
+- can only be used with legacy code.
+- using `Enumeration` we can only read data but we cannot remove the data.
+
+To overcome these problems java introduces `Iterator` cursor.
