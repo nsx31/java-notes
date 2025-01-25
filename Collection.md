@@ -295,3 +295,54 @@ while(e.hasmoreElements()){
 - using `Enumeration` we can only read data but we cannot remove the data.
 
 To overcome these problems java introduces `Iterator` cursor.
+
+## 3.2 Iterator :
+- It is a universal cursor.
+- With iterator we can do both read as well as remove operation.
+- `Collection` interface contins `iterator()` method which returns Iterator.
+- Methods available in Iterator interface are:
+```java
+boolean hasNext()
+Object next()
+void remove()
+```
+```java
+ArrayList c = new ArrayList();  // c can be any collection object
+
+Iterator itr = c.iterator();
+```
+
+### Limitations of Iterator :
+- Both iterator and enumeration can only move in formward direction, they cannot move in backward direction.
+- We cannot perform replace, add operation with iterator.
+
+## 3.3 ListIterator : 
+- It is a child interface of Iterator interface.
+- It is bidirectional cursor.
+- With listiterator we can perform read, remove, replace, addition of new objects.
+- `List` interface has `listIterator()` method which returns ListIterator.
+- Methods available in ListIterator :
+```java
+// forward movement
+boolean hasNext()
+Object next()
+int nextIndex()
+
+// backward movement
+boolean hasPrevious()
+Object previous()
+int previousIndex()
+
+void remove()
+void set(Object o)
+void add(Object o)
+```
+
+```java
+LinkedList l = new LinkedList();    // l can only be list object
+l.add("papi");
+
+ListIterator ltr = l.listIterator();
+```
+
+**Note :** ListIterator is the most powerful cursor but its limitation is, it is applicable only for list objects.
