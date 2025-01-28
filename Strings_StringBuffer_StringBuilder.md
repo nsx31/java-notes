@@ -17,9 +17,12 @@ System.out.println(sb);     // es loce es
 
 # 02 String object creation in Heap memory and String Constant Pool (SCP) :
 As a rule of thumb whenever we use `new` keyword, a new object is created in heap memory. SCP is a section of heap memory that stores strings only. If two refernce variables are using same string literal-for example, `String a = "nikhil"` and `String b = "nikhil"`-instead of creating two `"nikhil"` string objects, a single `"nikhil"` string object is created in the SCP. Both referene variable `a` and `b` will then point to this single object.   
+
 ![Alt](./images/heap_vs_scp.png)
+
 When any of the reference variables attempts to change its value, a new string object is created in the SCP. The reference variable then points to this new object.
 `b = "pankaj"`
+
 ![Alt](./images/heap_vs_SCP.png)
 
 The benefit of this SCP (String Constant Pool) approach is that it allows us to avoid creating duplicate values, which results in better memory management.
