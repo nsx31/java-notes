@@ -30,7 +30,9 @@ The benefit of this SCP (String Constant Pool) approach is that it allows us to 
 String userId = "d931j8";
 ```
 String object will be created in SCP and userId reference variable will point to that object.
+
 ![Alt](./images/1.png)
+
 As we can see only one object is created here. 
 
 ### Case 2: 
@@ -38,5 +40,7 @@ As we can see only one object is created here.
 String s = new String("Deez");
 ```
 Here, two string objects will be created: one in the heap memory (since the new keyword is used) and one in the String Constant Pool (SCP) because a string literal is passed to the constructor. Meanwhile, the reference variable `s` will point to the object present in the heap memory, not the one in the SCP.
+
 ![Alt](./images/2.png)
+
 Two string objects are created here.
