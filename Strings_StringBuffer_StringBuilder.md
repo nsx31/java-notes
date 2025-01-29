@@ -86,3 +86,16 @@ final String msg = "hello";     // "hello" will be created in SCP.
 String name = msg+"nikhil";     // "hello nikhil" will be created in SCP.
 ```
 
+# 03 Important String constructors :
+```java
+String s = new String();    
+String s = new String(String str);
+String s = new String(StringBuffer sb);     // will created equivalent string object using StringBuffer.
+String s = new String(StringBuilder sb);    // will created equivalent string object using StringBuilder.
+String s = new String(Char[] ch);        
+String s = new String(byte[] b);
+```
+
+# 04 StringBuffer :
+`StringBuffer` is recommended for use when the content is frequently changing. Since `StringBuffer` is **mutable**, no new object is created when the string changes. Instead, the original object is modified. 
+
