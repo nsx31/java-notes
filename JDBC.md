@@ -29,3 +29,25 @@
 - JDBC Api provides classes and interfaces which developers and driver software vendors can use.  
 - Implementation of Interface present inside the JDBC Api is provided by the driver software vendor. The implemented classes are called as Driver Software. 
 - Driver Software are present in the form of JAR files. It can be provided by either Java or Database Vendor or some third party.
+
+# Types of JDBC Driver
+1. Type-1 also known as bridge drivers.
+2. Type-2 also known as native drivers.
+3. Type-3 also known as middleware drivers.
+4. Type-4 alos known as pure java drivers or thin drivers.
+
+# Type-1 Driver
+
+![Alt](./images/6.png)
+
+- As we can observe from the above figure Type-1 driver is not directly communicating with the Database instead it is communicating with the ODBC driver. 
+- Features of Type-1 driver :
+    - We don't need to install this driver separately as it comes with JDK itself.
+    - This driver is Database independent because ODBC driver is the one who's communicating with the Database not the Type-1 driver.
+- Limitations of Type-1 driver :
+    - It is slowest driver becuase it requires multiple conversion. i.e `JavaApplication ----> Type1Conversion ----> ODBC Conversion ----> DB Conversion`.
+    - Internally, the Type-1 driver uses ODBC, which is only compatible with Windows machines. Therefore, Type-1 drivers can only be used on Windows, making them platform-dependent.
+    - Not supported by modern java.
+
+# Type-2 Driver
+
