@@ -41,13 +41,47 @@
 ![Alt](./images/6.png)
 
 - As we can observe from the above figure Type-1 driver is not directly communicating with the Database instead it is communicating with the ODBC driver. 
-- Features of Type-1 driver :
+- **Advantage** :
     - We don't need to install this driver separately as it comes with JDK itself.
     - This driver is Database independent because ODBC driver is the one who's communicating with the Database not the Type-1 driver.
-- Limitations of Type-1 driver :
-    - It is slowest driver becuase it requires multiple conversion. i.e `JavaApplication ----> Type1Conversion ----> ODBC Conversion ----> DB Conversion`.
+- **Limitations** :
+    - It is slowest driver becuase it requires multiple conversion. i.e `JavaApplication ----> ODBC ----> DB`.
     - Internally, the Type-1 driver uses ODBC, which is only compatible with Windows machines. Therefore, Type-1 drivers can only be used on Windows, making them platform-dependent.
-    - Not supported by modern java.
+    - Not supported by java 1.8 onwards.
 
 # Type-2 Driver
+
+![Alt](./images/7.png)
+
+- **Advantage** : 
+    - Faster than Type-1 driver.
+    - Compared to Type-1 drivers, Type-2 drivers are more portable. While they are still platform-dependent, we can choose the vendor-provided, database-specific native library based on the platform we are using, which is not possible with the Type-1 driver.
+
+- **Limitations** : 
+    - Type-2 drivers are database and platform dependent drivers.
+    - No gaurantee of vendor providing database native library. 
+    - These drivers are available for Oracle Database.
+
+**Note**: Type-2 drivers are the only drivers which are platform and database dependent.
+
+# Type-3 Driver
+
+![Alt](./images/8.png)
+
+- **Advantage** :
+    - Database and Platform independent driver.
+- **Limitations** :
+    - Relatively performance is low because of two level conversion i.e `JavaApplication ----> MiddleWareServer ----> Database`.
+    - Middleware server installation on local machine is required which may increase the cost of operation.
+
+# Type-4 Driver
+
+![Alt](./images/9.png)
+
+- **Advantage** :
+    - Type-4 driver communicates with Database directly using Database specific native protocols.
+    - Platform independent driver.
+    - Fast, since only one conversion is required.
+- **Limitations** :
+    - Database dependent driver.
 
