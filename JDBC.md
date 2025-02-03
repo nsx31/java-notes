@@ -28,3 +28,4 @@
 
 - JDBC Api provides classes and interfaces which developers and driver software vendors can use.  
 - Implementation of Interface present inside the JDBC Api is provided by the driver software vendor. The implemented classes are called as Driver Software. 
+- Driver Software are present in the form of JAR files. It can be provided by either Java or Database Vendor or some third party.
