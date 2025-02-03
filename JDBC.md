@@ -85,3 +85,4 @@
 - **Limitations** :
     - Database dependent driver.
 
+If we are using only one kind of database in our application then go with Type-4 driver but if we are using multiple databases then go with Type-3 driver. If Type-4 and Type-3 drivers are not availale for a database then go with Type-2 driver. And if none of the above three drivers exists for a database then go with the Type-1 driver.
