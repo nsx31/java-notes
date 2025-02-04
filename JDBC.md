@@ -86,3 +86,57 @@
     - Database dependent driver.
 
 If we are using only one kind of database in our application then go with Type-4 driver but if we are using multiple databases then go with Type-3 driver. If Type-4 and Type-3 drivers are not availale for a database then go with Type-2 driver. And if none of the above three drivers exists for a database then go with the Type-1 driver.
+
+# Basic Structure of JDBC Application
+- Load and Register Driver.
+- Establish connection between Java Application and Database.
+- Create Statement Object and send query.
+- Process result from ResultSet.
+- Close connection.
+
+# Load & Register Driver Class
+- To load a driver `Class.forName()` method is used.
+```java
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+```
+- For Type-1 driver we are not required to set class path but for remaining drivers we have to set a class path.
+- Every driver software is uniquely identified by its `Driver Class Name` for Type-1 driver its driver class name is `sun.jdbc.odbc.JdbcOdbcDriver`;
+- Inside driver software class there is a static block which is responsible for registering a driver, we don't have to do the driver software registration.
+```java
+class JdbcOdbcDriver {
+    static {
+        JdbcOdbcDriver driver = new JdbcOdbcDriver();
+        DriverManager.registerDriver(driver);
+    }
+}
+```
+
+# Establishing Connection between Java Application & Database
+- To establish connection between Java Applicationa and Database we use `Dm.getConnection()` method.
+    - `getConnection()` method takes database url, username and password as parameters. 
+```java
+import java.sql.*;
+
+Connection con = DriverManager.getConnection(https://db.com, username, password);
+
+
+
+/*
+databse url is of format:  main_protocol : sub_protocol : subname
+- main_protocol: is always JDBC
+- sub_protocol: by sub_protocol we mean driver protocol. In case of Type-1 it will be ODBC
+- subname: connection detail comes under subname
+
+Eg: for Type-1 :
+jdbc:obdc:demodsn
+*/
+```
+
+# Statement Object
+- To create statment object we use `createStatement()` method which is present inside the `Connection` interface.
+```java
+Statement st = con.createStatement();
+
+ResultSet rs = st.executeQuery("select * from students");
+```
+# Process Result from ResultSet
