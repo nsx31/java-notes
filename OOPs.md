@@ -10,3 +10,20 @@
 # Package Statement
 - A source file can have at most one package statement.
 - Package statement must be the first statement in a source file.
+
+# Class Level Modifiers
+Modifiers that can be used with top level class :
+- public 
+- abstract 
+    - if a class is absrract, object creation is not possible.
+- final
+    - if a class is using `final` modifier, creating subclass of that class is not possible.
+
+Modifiers that can be used with inner class : 
+- public
+- abstract
+- final
+- private
+- protected
+- static
+
