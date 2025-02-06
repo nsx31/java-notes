@@ -1,0 +1,12 @@
+# Source File Naming Convention 
+- If a source file contains a public class, then the name of the source file and the name of that public class must be same.
+- If a source file does not contain any public class then we can name source file whatever we want.
+
+**Note :** A source file can contains at max only one public class.
+
+# Import Statement
+- If a Java class is present in the same folder as the source file, we don’t have to explicitly import that class; it is by default available to the source file. In all other cases, we have to explicitly import the classes.
+
+# Package Statement
+- A source file can have at most one package statement.
+- Package statement must be the first statement in a source file.
