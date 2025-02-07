@@ -15,7 +15,7 @@
 Modifiers that can be used with top level class :
 - public 
 - abstract 
-    - if a class is absrract, object creation is not possible.
+    - if a class is an absract class, object creation of that class is not possible.
 - final
     - if a class is using `final` modifier, creating subclass of that class is not possible.
 
@@ -27,3 +27,16 @@ Modifiers that can be used with inner class :
 - protected
 - static
 
+# Abstract Modifier 
+- Abstract modifier can be used with methods and classes.
+- Sometimes we can only predict the declartion of a function but not its implementation since its implementation depends on other factors in that case its better if we define that function as **abstract**.
+```java
+abstract class Vehicle {
+
+    // abstract method
+    public abstract int getNoOfWheels();
+}
+```
+- If a class contains atleast one **abstract** method then that class also has to be declared as **abstract**.
+- If a class does not contains any **abstract** method, we can still declare that class as **abstract** if we want to.
+- A child class has to provide implementation of each abstract method present inside the abstract parent class.
