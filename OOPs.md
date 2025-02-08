@@ -40,3 +40,14 @@ abstract class Vehicle {
 - If a class contains atleast one **abstract** method then that class also has to be declared as **abstract**.
 - If a class does not contains any **abstract** method, we can still declare that class as **abstract** if we want to.
 - A child class has to provide implementation of each abstract method present inside the abstract parent class.
+
+# Modifier available for class members i.e variables & methods
+- final 
+    - if we define a variable as final it will act as a constant and if we define a function as final we cannot override that function.
+- public 
+- private
+    - class memeber that is set as private is available to other class members of the same class, it cannot be accessed outside. 
+- static 
+- abstract
+- protected
+    - if a member is declared a protected then we can access that member anywhere with in the same package and outside the package only in the child classes.
