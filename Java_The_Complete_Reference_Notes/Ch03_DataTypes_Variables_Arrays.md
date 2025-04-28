@@ -26,18 +26,38 @@ Java does not support unsigned, positive-only integers. It supports signed integ
 byte b = 12;
 short s = 678;
 int num = 12;
-long l = 3563467L;
+long id = 3563467L;
 ```
 
 ```java
 byte a;
 byte b = 12;
-// error because when b+5 expression is evaluated the result is int but not byte.
+// error, because when b+5 expression is evaluated the result is int but not byte.
 a = b + 5;  // error
 
 short num1;
 short num2 = 12;
-// error because when num2+5 expression is evaluated the result is int but not short.
+// error, because when num2+5 expression is evaluated the result is int but not short.
 num1 = num2 + 5;  // error
 ```
 
+### 1.2 : Floating Point Types
+If we want to define a `float`, we must explicitly tell the compiler by adding a capital or small `F` at the end of the double value.
+```java
+float temp = 34.6f;
+double leastCount = 534.53422;
+```
+
+### 1.3 : Characters 
+Character is defined using single quotes.
+```java
+char ch = 'a';
+```
+
+### 1.4 : Boolean
+```java
+boolean isAdmin = true;
+```
+
+## 02 : Type Conversion & Casting
+Converting one data types into another is what we called type conversion. Type conversion can be automatic process or we have to do it forcefully. 
