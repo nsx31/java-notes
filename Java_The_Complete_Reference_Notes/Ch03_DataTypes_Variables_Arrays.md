@@ -60,4 +60,49 @@ boolean isAdmin = true;
 ```
 
 ## 02 : Type Conversion & Casting
-Converting one data types into another is what we called type conversion. Type conversion can be automatic process or we have to do it forcefully. 
+Converting one data types into another is what we called type conversion. Type conversion can be automatic process or it can be done forcefully. 
+
+### 2.1 : Automatic Conversion
+Automatic type conversion will take place if the following two conditions are satisfied : 
+- The two types are compatible.
+- The destination type is larger than the source type.
+
+### 2.2 Casting
+Forceful conversion between two incompatible types is called casting.
+
+```java
+// automatic type conversion
+int num1 = 123;
+long num2 = num1;
+
+// type casting
+int a = 44;
+byte b;
+b = (byte) a;   // assigning int value to a byte variable.
+```
+
+## 03 : Arrays
+Array declaration is a two-step process. First, we declare an array variable that will hold the address of the array. Second, we allocate memory for the array. There are two ways to create an array.
+- Array declaration
+- Array initialization
+
+```java
+// array declartion
+int[] arr = new int[12];
+
+// array initialization
+int[] arr = {1,2,3,4,5,6};
+```
+Index number is used to access array value. Array index starts from 0.
+
+### 3.1 Multidimensional Arrays
+```java
+// both rows and columns are fixed
+int[][] twoD = new int [4][5];
+
+// only rows are fixed 
+int[][] twoD = new int[3][];
+twoD[0] = new int[4];
+twoD[1] = new int[1];
+twoD[2] = new int[7];
+```
