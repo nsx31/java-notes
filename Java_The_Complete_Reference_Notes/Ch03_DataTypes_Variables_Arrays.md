@@ -82,7 +82,7 @@ b = (byte) a;   // assigning int value to a byte variable.
 ```
 
 ## 03 : Arrays
-Array declaration is a two-step process. First, we declare an array variable that will hold the address of the array. Second, we allocate memory for the array. There are two ways to create an array.
+Array creation is a two-step process. First, we declare an array variable that will hold the address of the array. Second, we allocate memory for the array. There are two ways to create an array.
 - Array declaration
 - Array initialization
 
